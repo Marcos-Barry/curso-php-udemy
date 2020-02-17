@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<title>PPSI II: seletores avançados</title>
+
+	<style>
+
+	body { font-family: "Courier New", Courier, monospace; font-size: 300%; background-color: #000; color: #0f3; }
+	h1 { display:none; }
+	a, a:link, a:visited, a:hover, a:active { text-decoration: none; color: #0f3; }
+
+
+
+	/1. <h1> via seletor descendente/
+	div  h1 {display:inline-block;color:purple;}/alterando o display par o h1 aparecer e deixando na cor roxa
+
+	/2. [710] usando qualquer seletor à sua escolha/
+	span#i710{ color:white;}/seletor id utilizado/
+
+	/3. <h1>via seletor de filhos/
+	div > h1:first-letter{font-style: italic;}/primeira letra de h1 em italico/
+
+	/4. [101] usando qualquer seletor à sua escolha/
+	#i101{ color:orange;}/seletor id utilizado para deixar [101] na cor laranja/
+
+
+	/5. [810] usando qualquer seletor à sua escolha/
+	p + p em{font-weight: bold;}/seletor de irmãos adjacentes para deixar [810] com preenchimento bold/
+
+	/6. [010] via seletor descendente/
+	span strong{ font-style: italic;} /* [010] passa a ser italico*/
+
+	/7. [010] via seletor de filhos/
+	span > strong { color:pink; }/* [010] alterado para a cor rosa */
+
+	/8. [010] via seletor de irmãos adjacentes/
+	span + span strong{font-weight: bold;} /* [010] passa a ter preenchimento ou bold*/
+
+	/9. [210] e [310], simultaneamente, através de seletor de atributos/
+	a[href="#"]{color:yellow;}
+	a:active[href="#"]{color:red;}
+
+	/10. [909] insira, via pseudoclasse, o 910/
+	span.c909::after { 
+  	content: " 910";
+	}
+	/11.Pesquise nas especificações do W3C e incorpore à sua página (e à sua solução) outras 3 técnicas não abordadas neste encontro, explicando ainda seu funcionamento/
+
+	/seletor id utilizado no topico 4/
+	/pseudo classe :after no topico 10/
+    /pseudo classe :first letter no topico 3/
+	</style>
+
+</head>
+
+	<body>
+
+		<div id="div1">
+
+			<div id="div2">
+					<h1 title="TP">TP</h1>
+				<p>
+				000 001 002 003 004 005 006 007 008 <span class="c009">009</span>
+					<span class="c010"><strong>010</strong></span>
+					100 <em style="font-style: normal" id="i101">101</em> 102 103 104 105 106 107 108 109 110
+					200 201 202 203 204 205 206 207 208 209 
+					<a href="#" title="210">210</a>
+					300 301 302 303 304 305 306 307 308 309 
+					<a href="#" title="310">310</a>
+					400 401 402 403 404 405 406 407 408 409 410
+				</p>
+
+				<p>
+				500 501 502 503 504 505 506 507 508 509 <strong style="font-weight: normal;">510</strong>
+				600 601 602 603 604 605 606 607 608 609 <span class="c610"><a href="http://www.610.com">610</a></span>
+				700 701 702 703 704 705 706 707 708 709 <span id="i710">710</span>
+				800 801 802 803 804 805 806 807 808 809 <em style="font-style: normal">810</em>
+				900 901 902 903 904 905 906 907 908 <span class="c909">909</span>
+				</p>
+				
+			</div><!-- fim da div2-->
+
+		</div><!-- fim da div1-->
+
+
+	</body>
+
+</html>

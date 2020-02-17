@@ -1,0 +1,15 @@
+<?php 
+
+if(!is_dir('images')) mkdir('images');
+
+	foreach (scandir("images") as $item) {
+		// !in_array = nao pode conter dentro desse array 
+		if(!in_array($item, array(".",".."))){
+
+			unlink("images/".$item);
+		}
+	};
+
+echo "ok";
+
+?>

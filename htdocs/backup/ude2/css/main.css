@@ -1,0 +1,12 @@
+
+
+*{	margin: 0;	padding: 0;}
+body{font-family: helvetica, arial ;	font-size: 18px;	color: #333;}
+header{	height: 120px; background-color: #262626;}
+footer{height: 80px; background-color: darkred; color: white; padding: 15px ; margin-top: 10px; text-align: center;}
+img{ width: 90px; margin-top: 5px; color: yellow;}
+.container{ margin: 0 auto; width: 960px; }
+#conteudo{ padding: 50px 0; }
+#menu{ float: right; padding: 50px 0; }
+#menu a{ text-decoration: none; padding: 50px 45px; font-size:18px; color: #e3e3e3; text-shadow: 1px 1px 1px #111;}
+#menu a:hover{ background-color: darkred; }
